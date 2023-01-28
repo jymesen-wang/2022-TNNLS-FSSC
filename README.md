@@ -13,7 +13,7 @@ If you have any questions, please connect zhenyu.ma@mail.nwpu.edu.cn
 # Use of Main Function
 To use function 'ULGEmzy.m' for construct anchor graph, please follow the input/output format:
 
-[B,M] = ULGEmzy(X,numAnchor,numNeighbor,generateAnchor); 
+[B,M] = ULGEmzy(X,numAnchor,numNeighbor,generateAnchor)
 
 Input:
 numAnchor: the number of anchors
