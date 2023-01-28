@@ -8,3 +8,5 @@ https://ieeexplore.ieee.org/document/9354504
 The code explanation: 
 The main function of the code: FSSC.m
 You can use demo.m to perform FSSC clustering on USPS and Letter data sets.
+
+If you have any questions, please connect zhenyu.ma@mail.nwpu.edu.cn
