@@ -11,9 +11,9 @@ You can use demo.m to perform FSSC clustering on USPS and Letter data sets.
 If you have any questions, please connect zhenyu.ma@mail.nwpu.edu.cn
 
 # Use of Main Function
-To use function 'AnchorGEN.m' for constructing anchor graph, please follow the input/output format:
+To use function **'AnchorGEN.m'** for constructing anchor graph, please follow the input/output format:
 
-[B,M] = AnchorGEN(X,numAnchor,numNeighbor,generateAnchor)
+**[B,M] = AnchorGEN(X,numAnchor,numNeighbor,generateAnchor)**
 
 Input:
 numAnchor: the number of anchors
@@ -26,9 +26,9 @@ M: anchor data matrix
 
 Example for USPS(9298$\times$256) data set: [B,M] = AnchorGEN(X,9,20,1)
 
-To use function 'FSSC.m' for self-supervised clustering, please follow the input/output format:
+To use function **'FSSC.m'** for self-supervised clustering, please follow the input/output format:
 
-[result,labelnew,t,Rank,rp] = FSSC(X,B,M,label,alpha_u,alpha_l,isW)
+**[result,labelnew,t,Rank,rp] = FSSC(X,B,M,label,alpha_u,alpha_l,isW)**
 
 Input:
 X: data matrix
