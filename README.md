@@ -24,7 +24,7 @@ Output:
 B: anchor graph
 M: anchor data matrix
 
-Example for USPS(9298$times$256) data set: [B,M] = AnchorGEN(X,9,20,1)
+Example for USPS(9298$\times$256) data set: [B,M] = AnchorGEN(X,9,20,1)
 
 To use function 'FSSC.m' for self-supervised clustering, please follow the input/output format:
 
@@ -46,5 +46,5 @@ t: running time
 Rank: the index of anchors from full samples
 rp: the index of c representative points from full samples
 
-Example for USPS(9298$times$256) data set: [result,~,t,~,rp] = FSSC(X,B,M,label)
+Example for USPS(9298$\times$256) data set: [result,~,t,~,rp] = FSSC(X,B,M,label)
 result[ACC,NMI,ARI] = [0.7029 0.6636 0.6027]
