@@ -6,23 +6,25 @@ Wang J, Ma Z, Nie F, et al. Fast Self-Supervised Clustering with Anchor Graph[J]
 https://ieeexplore.ieee.org/document/9354504
 
 The code explanation: 
-The main function of the code: ULGEmzy.m and FSSC.m
+The main function of the code: AnchorGEN.m and FSSC.m
 You can use demo.m to perform FSSC clustering on USPS and Letter data sets. 
 If you have any questions, please connect zhenyu.ma@mail.nwpu.edu.cn
 
 # Use of Main Function
-To use function 'ULGEmzy.m' for construct anchor graph, please follow the input/output format:
+To use function 'AnchorGEN.m' for constructing anchor graph, please follow the input/output format:
 
-[B,M] = ULGEmzy(X,numAnchor,numNeighbor,generateAnchor)
+[B,M] = AnchorGEN(X,numAnchor,numNeighbor,generateAnchor)
 
 Input:
 numAnchor: the number of anchors
 numNeighbor: the number of neighbors of anchor graph
-generateAnchor: option '1' means 'BKHK', '2' means 'kmeans', '3' means 'litekmeans'
+generateAnchor: option '1' means 'BKHK', '2' means 'kmeans++', '3' means 'kmeans', '4' means 'Random Selection'
 
 Output:
 B: anchor graph
 M: anchor data matrix
+
+Example for USPS(9298$times$256) data set: [B,M] = AnchorGEN(X,9,20,1)
 
 To use function 'FSSC.m' for self-supervised clustering, please follow the input/output format:
 
@@ -43,3 +45,6 @@ labelnew: predicted label by FSSC
 t: running time
 Rank: the index of anchors from full samples
 rp: the index of c representative points from full samples
+
+Example for USPS(9298$times$256) data set: [result,~,t,~,rp] = FSSC(X,B,M,label)
+result[ACC,NMI,ARI] = [0.7029 0.6636 0.6027]
